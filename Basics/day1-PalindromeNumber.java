@@ -1,4 +1,5 @@
 // Problem: Palindrome Number
+// Platform: LeetCode
 // Approach: Math (reverse half using modulus + division)
 // Time: O(log n)
 // Space: O(1)
