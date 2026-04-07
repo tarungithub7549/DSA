@@ -1,5 +1,5 @@
 // Problem: Print a given name n times using recursion
-// Platform: basic recursion
+// Platform: take u forward
 // Approach: Recursive (increase count until it reaches n)
 // Time: O(n)
 // Space: O(n)  (due to recursion stack)
