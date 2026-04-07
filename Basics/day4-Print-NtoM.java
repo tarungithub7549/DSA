@@ -1,5 +1,5 @@
 // Problem: Print numbers from n to count using recursion
-// Platform: basic recursion
+// Platform: take u forward
 // Approach: Recursive (decrease n in each call until base case)
 // Time: O(n - count)
 // Space: O(n - count)  (due to recursion stack)
