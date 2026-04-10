@@ -1,22 +1,29 @@
 // Problem: Check if a string is a palindrome
 // Platform: leetcode
-// Approach: Compare characters from start and end recursively
+// Approach: Compare only characters from start and end
 // Time: O(n)
-// Space: O(n)  (due to recursion stack)
-// Key Idea: compare s[i] with s[n-i-1] and move inward until middle
+// Space: O(1)
+// Key Idea: Two-pointer + skip invalid characters
 
-class Solution{
-    public static boolean checkPalindrom(String s, int i){
-
-        if (s.length()==1) {
-            return true;
+class Solution {
+    public static boolean isPalindrome(String s) {
+        int left = 0;
+        int right = s.length() - 1;
+        while (left < right) {
+            // skip non-alphanumeric
+            while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
+                left++;
+            }
+            while (left < right && !Character.isLetterOrDigit(s.charAt(right))) {
+                right--;
+            }
+            // compare characters
+            if (Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) {
+                return false;
+            }
+            left++;
+            right--;
         }
-        if (i >= s.length()/2) {
-            return true;
-        }
-        if (s.toLowerCase().charAt(i) != s.toLowerCase().charAt(s.length()-i-1)) {
-            return false;
-        }
-        return checkPalindrom(s, i+1);
+        return true;
     }
 }
