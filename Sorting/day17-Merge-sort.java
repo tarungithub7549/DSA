@@ -5,7 +5,7 @@
 // Space: O(n)
 // Key Idea: Divide array into halves, sort each half, then merge them
 
-
+import java.util.*;
 class Solution{
             // Main function — splits the array recursively
 public void mergeSort(int[] arr, int left, int right) {
