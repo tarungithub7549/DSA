@@ -33,9 +33,9 @@ public void merge(int[] arr, int left, int mid, int right) {
             arr[k++] = rightArr[j++];         // right element is smaller, pick it
         }
     }
-
+    
     // copy any remaining elements
     while (i < leftArr.length)  arr[k++] = leftArr[i++];
     while (j < rightArr.length) arr[k++] = rightArr[j++];
-}
+    }
 }
