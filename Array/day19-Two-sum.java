@@ -1,7 +1,7 @@
 // Problem: Two Sum
-// Platform: LeetCode (1)
-// Approach: HashMap (One-pass)
-// Time: O(n)
+// Platform: Neetcode
+// Approach: using HashMap
+// Time: O(1)
 // Space: O(n)
 // Key Idea: Store elements in map and check if complement exists
 
@@ -9,15 +9,11 @@ import java.util.*;
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
-
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
-
-            if (map.containsKey(complement)) {
-                return new int[]{map.get(complement), i};
-            }
+            if (map.containsKey(complement)) return new int[]{map.get(complement), i};
             map.put(nums[i], i);
         }
         return new int[]{};
     }
-}
+} 
